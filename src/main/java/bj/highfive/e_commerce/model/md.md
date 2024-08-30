@@ -62,5 +62,47 @@
 * 'orders'->order_items:une commande peut avoir plusoeurs items
 * 'produits'->orders_items:un produit peut etre commander plusieurs fois dans la journée.
 
+1-'none'
+
+hibernate ,l'orm utilisé par defaut dans spring Boot, peut automiquement 
+
+
+none: Désactive la gestion automatisue du schema  par hibernate
+Aucune ùodification du shema de BDD ne sera effectué au démarramge de l'application . 
+ 
+
+ ###### 2 -validate
+ Hibernate vérifie que ke schema de bdd correspond à la structure définie dans les entitésJPA . Aucune modification  du schéma ne sera effectuée, mais si le schema est incorrecte ou ne correspond pas, une exception  est levée.
+ 
+
+ #### 3 -update
+ Hibernate met à jour le schema de la bdd pour qu'il corresponde aux entités JPJA définies. Cela inclut l'ajout de nouvelles tables ,colonnes, ou contraintes existantes.
+
+###### 4 -create 
+ Hibernate supprime le schema existant et crée un nouveau schéma à partir des entités JPA définies. Cela implique de perdre toutes les données existantes puisque le schéma est  recréé à chaque démarrage de l 'application.
+
+### 5- create-drop
+ Similaire à ' create', mais avec la particularité que le schema est supprimé lorsque l'aplication est arreté.Cela signifie que la bdd est recréée à chaque démarrage et supprimée à chaque arre se l'application.
+
+ ### Schema d'une BDD
+ Le schema d'une bdd est une representation de la structure logique des données , incluant les tables , les colonnes ,les relations entre les tables , et les contraintes.Il definit comment les données sont organisées,interconnectées et gereer pour assurer leur cohérance et intégrité.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
